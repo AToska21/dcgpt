@@ -6,7 +6,7 @@
 > **Warning**
 >
 > #### 2023-04-12 Bing now supported
-> #### 2023-04-01 Only Plus account can access Unofficial model
+> #### 2023-04-01 Only Plus accounts can access Unofficial model
 > #### 2023-03-27 Bard now supported
 
 ## Features
@@ -23,16 +23,7 @@
    * `oppo`: OPPO says exact opposite of what chatGPT would say
    * `dev`: Developer Mode, v2 Developer mode enabled
 
-* `/private` ChatGPT switch to private mode
-* `/public` ChatGPT switch to public mode
-* `/replyall` ChatGPT switch between replyAll mode and default mode
 * `/reset` Clear ChatGPT conversation history
-* `/chat-model` Switch different chat model
-   * `OFFICIAL-GPT-3.5`: GPT-3.5 model
-   * `OFFICIAL-GPT-4.0`: GPT-4.0 model (make sure your account can access gpt-4 model)
-   * `Website ChatGPT-3.5`: Website ChatGPT-3.5 model (UNOFFICIAL)
-   * `Website ChatGPT-4.0`: Website ChatGPT-4.0 model (UNOFFICIAL)(available if you got a plus account)
-   * `Bard`: Google Bard Model
 
 ### Chat
 
@@ -51,22 +42,6 @@
 ![image](https://user-images.githubusercontent.com/91911303/223772334-7aece61f-ead7-4119-bcd4-7274979c4702.png)
 
 
-
-### Mode
-
-* `public mode (default)`  the bot directly reply on the channel
-
-  ![image](https://user-images.githubusercontent.com/89479282/206565977-d7c5d405-fdb4-4202-bbdd-715b7c8e8415.gif)
-
-* `private mode` the bot's reply can only be seen by the person who used the command
-
-  ![image](https://user-images.githubusercontent.com/89479282/206565873-b181e600-e793-4a94-a978-47f806b986da.gif)
-
-* `replyall mode` the bot will reply to all messages in the channel without using slash commands (`/chat` will also be unavailable)
-
-   > **Warning**
-   > The bot will easily be triggered in `replyall` mode, which could cause program failures
-
 # Setup
 
 ## Critical prerequisites to install
@@ -83,15 +58,11 @@
 3. Get the token from bot setting
 
    ![image](https://user-images.githubusercontent.com/89479282/205949161-4b508c6d-19a7-49b6-b8ed-7525ddbef430.png)
-4. Store the token to `.env` under the `DISCORD_BOT_TOKEN`
+4. Put the token in `.env` next to `DISCORD_BOT_TOKEN`
 
    <img height="190" width="390" alt="image" src="https://user-images.githubusercontent.com/89479282/222661803-a7537ca7-88ae-4e66-9bec-384f3e83e6bd.png">
 
-5. Turn MESSAGE CONTENT INTENT `ON`
-
-   ![image](https://user-images.githubusercontent.com/89479282/205949323-4354bd7d-9bb9-4f4b-a87e-deb9933a89b5.png)
-
-6. Invite your bot to your server via OAuth2 URL Generator
+5. Invite your bot to your server via OAuth2 URL Generator
 
    ![image](https://user-images.githubusercontent.com/89479282/205949600-0c7ddb40-7e82-47a0-b59a-b089f929d177.png)
 ## Step 2: Official API authentication
