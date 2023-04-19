@@ -155,4 +155,4 @@ https://git.natsuki.live/monomouse/dcgpt""")
 
     TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 
-    client.run("MTA5NTk0MzQwMjc5MDU4NDMzMA.G6fO3S.KBAzcH12QU94b9NAVuFMf3Ae6Rv24PNqjFM3Vc")
+    client.run(TOKEN)
