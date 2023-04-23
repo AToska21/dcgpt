@@ -49,7 +49,8 @@ class aclient(discord.Client):
             return EdgeChatbot(cookiePath='./cookies.json')
 
     async def send_message(self, message, user_message):
-        author = message.author.id
+        author = message.user.id
+        await message.response.defer(ephemeral=self.isPrivate)
         try:
             chat_model_status = self.chat_model
             if self.chat_model == "UNOFFICIAL":
