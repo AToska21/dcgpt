@@ -11,7 +11,6 @@ logger = log.setup_logger(__name__)
 def run_discord_bot():
     @client.event
     async def on_ready():
-        await client.send_start_prompt()
         await client.tree.sync()
         logger.info(f'{client.user} is now running!')
 
