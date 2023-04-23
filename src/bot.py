@@ -25,11 +25,6 @@ def run_discord_bot():
             f"\x1b[31m{username}\x1b[0m : /chat [{message}] in ({channel})")
         await client.send_message(interaction, message)
 
-    @client.tree.command(name="chat-model", description="Switch different chat model")
-    @app_commands.choices(choices=[
-        app_commands.Choice(name="ChatGPT", value="OFFICIAL"),
-    ])
-
     @client.tree.command(name="reset", description="Complete reset conversation history")
     async def reset(interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=False)
