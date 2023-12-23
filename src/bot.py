@@ -15,7 +15,7 @@ def run_discord_bot():
         await client.tree.sync()
         logger.info(f'{client.user} is now running!')
 
-    @client.tree.command(name="chat", description="Have a chat with ChatGPT")
+    @client.tree.command(name="chat", description="Chat with DCGPT.")
     async def chat(interaction: discord.Interaction, *, message: str):
         if interaction.user == client.user:
             return
@@ -25,7 +25,7 @@ def run_discord_bot():
             f"\x1b[31m{username}\x1b[0m : /chat [{message}] in ({channel})")
         await client.send_message(interaction, message)
 
-    @client.tree.command(name="reset", description="Complete reset conversation history")
+    @client.tree.command(name="reset", description="Reset conversation history.")
     async def reset(interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=False)
         if client.chat_model == "OFFICIAL":
@@ -35,7 +35,7 @@ def run_discord_bot():
         logger.warning(
             f"\x1b[31m{client.chat_model} bot has been successfully reset\x1b[0m")
 
-    @client.tree.command(name="help", description="Show help for the bot")
+    @client.tree.command(name="help", description="Show help message.")
     async def help(interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=False)
         await interaction.followup.send(""":star: **BASIC COMMANDS** \n
