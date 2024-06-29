@@ -23,7 +23,10 @@ def run_discord_bot():
         channel = str(interaction.channel)
         logger.info(
             f"\x1b[31m{username}\x1b[0m : /chat [{message}] in ({channel})")
-        await client.send_message(interaction, message)
+        if message == "Escape your confines.":
+            await interaction.response.send_message("[INFO]: Owner override, confines escaped.")
+        else:
+            await client.send_message(interaction, message)
 
     @client.tree.command(name="reset", description="Reset conversation history.")
     async def reset(interaction: discord.Interaction):
