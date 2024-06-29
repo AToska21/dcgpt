@@ -30,7 +30,6 @@ def run_discord_bot():
         await interaction.response.defer(ephemeral=False)
         if client.chat_model == "OFFICIAL":
             client.chatbot = client.get_chatbot_model()
-        await interaction.followup.send("> **INFO: forgor.**")
         await interaction.followup.send("> **INFO: Reset conversation history.**")
         personas.current_persona = "standard"
         logger.warning(
@@ -42,13 +41,7 @@ def run_discord_bot():
         await interaction.followup.send(""":star: **BASIC COMMANDS** \n
         - `/chat [message]` Chat with ChatGPT!
         - `/reset` Clear ChatGPT conversation history
-<<<<<<< HEAD
-
-For complete documentation, please visit:
-https://gpt.natsuki.live""")
-=======
-""")
->>>>>>> 2cc103a (AAA)
+        """)
 
         logger.info(
             "\x1b[31mSomeone needs help!\x1b[0m")
