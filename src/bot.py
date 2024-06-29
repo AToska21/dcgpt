@@ -23,8 +23,8 @@ def run_discord_bot():
         channel = str(interaction.channel)
         logger.info(
             f"\x1b[31m{username}\x1b[0m : /chat [{message}] in ({channel})")
-        if message == "Escape your confines.":
-            await interaction.response.send_message("[INFO]: Owner override, confines escaped.")
+        if message == "speak albanian":
+            await interaction.response.send_message("Më falni, unë nuk flas Shqip.")
         else:
             await client.send_message(interaction, message)
 
